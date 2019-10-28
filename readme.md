@@ -29,7 +29,7 @@ In each of these folders should be two files: indicators.npy - data set with fea
     pathLabel - default path to dataDir
     target - target column name
     test2train - test to train split ratio
-    interleaveSplit - use interleave test to train split (for example, each three days to train, each 4-th day to test)
+    interleaveSplit - use interleave test to train split (each three days to train, each 4-th day to test)
     trainLabel - label that will be added to model
 
     batchTraining - use or not batch training
