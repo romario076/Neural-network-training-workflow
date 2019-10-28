@@ -68,5 +68,5 @@ Run: python trainDNN.py
 Run TensorBoard(in directory where trainDNN.py): tensorboard --logdir='TensorBoardLogs/' --host=10.12.1.59 --port=8999  (check if port not busy)
 
 
-### Running example:
+### NN architeture scheme:
 ![alt text](https://github.com/romario076/Neural-network-train-workflow/blob/master/DNN/scheme.jpg)
