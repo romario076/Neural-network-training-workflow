@@ -40,7 +40,7 @@ In each of these folders should be two files: indicators.npy - data set with fea
     earlyStop - early stop for NN. If no better results mode than earlyStop epochs, then sstop trainig
 
     fImportanceFile - feature importance file, if exists.
-    useTopImportantFeatures - use numbver of best features in training from fImportanceFile. Can be: "all" or any integer number>0
+    useTopImportantFeatures - use numbver of best features in training from fImportanceFile. ("all", number>0).
     useTensorBoard = False
 
     logLevel - logLevel=2 --> no full training history shows. Only at the end of epoch
