@@ -100,6 +100,7 @@ class NNtrain(object):
         self.predictionTask = self.Configs.predictionTask
         self.maxEvals = self.Configs.maxEvals
         self.earlyStop = self.Configs.earlyStop
+        self.earlyStop_minDelta = self.Configs.earlyStop_minDelta
         self.logLevel = self.Configs.logLevel
         self.batchTrMaxBS = self.Configs.batchTrMaxBS
 
@@ -256,7 +257,7 @@ class NNtrain(object):
                                               validation_steps=validation_steps,
                                               callbacks=[
                                                   ModelCheckpoint(modelName, save_best_only=True),
-                                                  EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, verbose=self.logLevel),
+                                                  EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, min_delta=self.earlyStop_minDelta, verbose=self.logLevel),
                                                   tensorboard
                                               ])
             else:
@@ -268,7 +269,7 @@ class NNtrain(object):
                                               validation_steps=validation_steps,
                                               callbacks=[
                                                   ModelCheckpoint(modelName, save_best_only=True),
-                                                  EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, verbose=self.logLevel)
+                                                  EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, min_delta=self.earlyStop_minDelta, verbose=self.logLevel)
                                               ])
 
             ### Save models training history
@@ -351,14 +352,14 @@ class NNtrain(object):
                 history = model.fit(X1, Y1, batch_size=batch_size, epochs=epochs, verbose=self.logLevel, validation_data=(X2, Y2),
                                     callbacks=[
                                         ModelCheckpoint(modelName, save_best_only=True),
-                                        EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, verbose=self.logLevel),
+                                        EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, min_delta=self.earlyStop_minDelta, verbose=self.logLevel),
                                         tensorboard
                                     ])
             else:
                 history = model.fit(X1, Y1, batch_size=batch_size, epochs=epochs, verbose=self.logLevel, validation_data=(X2, Y2),
                                     callbacks=[
                                         ModelCheckpoint(modelName, save_best_only=True),
-                                        EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, verbose=self.logLevel)
+                                        EarlyStopping(monitor='val_loss', mode='min', patience=self.earlyStop, min_delta=self.earlyStop_minDelta, verbose=self.logLevel)
                                     ])
 
             ### Save models training history

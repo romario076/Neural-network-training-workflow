@@ -46,6 +46,7 @@ class Configs:
     predictionTask = "classification"                                     ### Classification or regression task
     maxEvals = 3
     earlyStop = 10
+    earlyStop_minDelta = 0.0001
 
     fImportanceFile = './DNN/ImportanceGrad_0.01_2018-03-01_2019-04-05.csv'
     useTopImportantFeatures = "all"
