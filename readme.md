@@ -70,6 +70,12 @@ If you want to add your own new loss function, you can add it into lossFunctions
 Run: python trainDNN.py
 Run TensorBoard(in directory where trainDNN.py): tensorboard --logdir='TensorBoardLogs/' --host=10.12.1.59 --port=8999  (check if port not busy)
 
+<hr>
 
 ### NN architeture scheme:
 ![alt text](https://github.com/romario076/Neural-network-train-workflow/blob/master/DNN/scheme.jpg)
+
+<hr>
+
+### Tensorboard output during training:
+![alt text](https://user-images.githubusercontent.com/10981310/68022506-2e6dcb80-fcad-11e9-8458-848858ab1871.png)
