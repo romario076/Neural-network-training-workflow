@@ -3,10 +3,11 @@
 
 This workflow allow to train and optimize NN using arbitrary data set for regression and binary classification problem.
 But data for training shoud be aggregate in correct form.
+<br>
 Path to data controlled from config as follows:
     dataDir = Configs.defPath / Configs.instrument / Configs.pathLabel
-
-dataDir should have for each data separate folder.
+<br>
+For each Date shoud exists separate folder in 'dataDir' directory.
 For example, in dataDir should be folders: "2019-01-01", "2019-01-02", "2019-01-03" ... etc.
 In each of these folders should be two files: indicators.npy - data set with features, targets.npy - data set with targets.
 
