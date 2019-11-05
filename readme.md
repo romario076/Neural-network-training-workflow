@@ -9,7 +9,9 @@ Path to data controlled from config as follows:<br>
 
 For each Date shoud exists separate folder in 'dataDir' directory.<br>
 For example, in dataDir should be folders: "2019-01-01", "2019-01-02", "2019-01-03" ... etc.<br>
-In each of these folders should be two files: indicators.npy - data set with features, targets.npy - data set with targets.
+In each of these folders should be two files: 
+* indicators.npy - data set with features
+* targets.npy - data set with targets.
 
 
 ### Requiremets:
