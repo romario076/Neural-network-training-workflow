@@ -1,7 +1,7 @@
 
 # Neural network training workflow
 
-This workflow allow to train and optimize NN using arbitrary data set.
+This workflow allow to train and optimize NN using arbitrary data set for regression and binary classification problem.
 But data for training shoud be aggregate in correct form.
 Path to data controlled from config as follows:
     dataDir = Configs.defPath / Configs.instrument / Configs.pathLabel
