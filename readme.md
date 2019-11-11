@@ -14,6 +14,12 @@ In each of these folders should be two files:
 * targets.npy - data set with targets.
 
 
+There are two ways to train the model, depending on the size of the input data set.<br>
+If there is a lot of free RAM, then you can load all the data into memory. (*batchTraining = False*)<br>
+If the amount of training data is very large, you can use the option to train in parts. (*batchTraining = True*)<br>
+If batchTraining = True, then for one batch will be taken one day, or one file.<br>
+
+
 ### Requiremets:
 * python 3.6
 * pandas
