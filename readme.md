@@ -88,3 +88,5 @@ If you want to add your own new loss function, you can add it into lossFunctions
 
 ### Tensorboard output during training:
 ![alt text](https://user-images.githubusercontent.com/10981310/68022506-2e6dcb80-fcad-11e9-8458-848858ab1871.png)
+
+<hr>
